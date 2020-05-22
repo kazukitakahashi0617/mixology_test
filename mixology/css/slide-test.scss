@@ -1,0 +1,117 @@
+html, body {
+    margin: 0;
+    font-family: dnp-shuei-mincho-pr6n, sans-serif;
+    font-style: normal;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+p {
+    color: #222;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 22px;
+}
+.container, .slider-container {
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.two-column-item {
+    margin-right: 30px;
+    width: calc(50% - 15px);
+    box-sizing: border-box;
+    &:nth-child(2n) {
+        margin-right: 0;
+    }
+    img {
+        width: 100%;
+    }
+}
+.change-btn {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 999;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .7;
+}
+.next-btn {
+    right: 10px;
+    .slide-arrow {
+        margin-right: -1px;
+        div:first-child {
+            width: 10px;
+            height: 3px;
+            background-color: #222;
+            transform: rotate(45deg);
+            border-radius: 1px;
+        }
+        div:last-child {
+            margin-top: 2px;
+            width: 10px;
+            height: 3px;
+            background-color: #222;
+            transform: rotate(-45deg);
+            border-radius: 1px;
+        }
+    }
+}
+.prev-btn {
+    left: 10px;
+    .slide-arrow {
+        margin-left: -2px;
+        div:first-child {
+            width: 10px;
+            height: 3px;
+            background-color: #222;
+            transform: rotate(-45deg);
+            border-radius: 1px;
+        }
+        div:last-child {
+            margin-top: 2px;
+            width: 10px;
+            height: 3px;
+            background-color: #222;
+            transform: rotate(45deg);
+            border-radius: 1px;
+        }
+    }
+}
+.food-slide {
+    width: 100%;
+    // height: auto;
+    overflow: hidden;
+    position: relative;
+}
+.food-slides {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    img {
+        width: 100%;
+        // height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .two-column-item {
+        width: 100%;
+        margin-right: 0;
+    }
+}
